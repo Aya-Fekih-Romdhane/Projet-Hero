@@ -1,0 +1,18 @@
+<div class="row mt-5">
+    <div  class="col-lg-3" *ngFor="let item of listheros">
+        <div  class="card m-2" >
+            <img [src]="'http://127.0.0.1:3000/getimage/'+item.image" class="wid">
+            <h2>{{item.name}}</h2>
+            <h3>{{item.power}}</h3>
+            <div class="text-center">
+                <button [routerLink]="['/update',item._id]" class="btn btn-info mr-2 ml-2 text-light">Update Hero</button>
+                <button (click)="del(item._id)" class="btn btn-danger mr-2 ml-2">Delete Hero !</button>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
+</div>
